@@ -1,3 +1,10 @@
+参考地址：
+https://www.cnblogs.com/isLiu/p/8119861.html
+https://www.processon.com/mindmap/5cfcdfdee4b0a64c88ad0190
+https://react.docschina.org/docs/context.html
+https://www.cnblogs.com/mengff/p/9511419.html
+https://www.jianshu.com/p/eba2b76b290b
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

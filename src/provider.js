@@ -1,16 +1,15 @@
 import React from 'react';
+import { StoreContext } from './StoreContext';
 
 export class Provider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.StoreContext = React.createContex(props.store);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
-    const { StoreContext } = this;
     const { store } = this.props;
     return (
       // 原封返回子组件
-      <StoreContext.Provider value={store}>
+      <StoreContext.Provider value={{ store }}>
         this.props.children
       </StoreContext.Provider>
     );
