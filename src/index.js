@@ -2,8 +2,8 @@ function createStore(state, stateChange){
     const listeners = [];
     const getState = () => state;
     const dispatch = (action) => {
-			state = stateChange(state, action);
-      listeners.forEach(fn => fn());
+	    state = stateChange(state, action);
+        listeners.forEach(fn => fn());
     };
     const subscribe = fn => {
         listeners.push(fn);
