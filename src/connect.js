@@ -29,7 +29,9 @@ export const connect = (mapStateToProps, mapDispatchToProps) => {
       update() {
         const { store } = this.context;
         const stateProps = mapStateToProps(store.getState());
-        const dispatchProps = bindActionCreators(mapDispatchToProps, store.dispatch);
+        // 这样写，只支持mapDispatchToProps return的对象的属性值是返回action对象的函数 mapDispatchToProps（）{return {increment: () => ({type:'xxx'}) }}
+        // 改动mapDispatchToProps为mapDispatchToProps（）！！！！！！
+        const dispatchProps = bindActionCreators(mapDispatchToProps(), store.dispatch);
 
         this.setState({
           props: {
