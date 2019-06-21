@@ -1,8 +1,8 @@
-export function createStore(reducer, enhancer) {
+export function createStore(reducer, initstate, enhancer) {
   if(enhancer) {
-    return enhancer(createStore)(reducer);
+    return enhancer(createStore)(reducer, initstate);
   }
-  let state = {};
+  let state = initstate || {};
   const listners = [];
   function getState() {
     return state;
